@@ -13,7 +13,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $users = \App\User::paginate(10);
+        return view('admin.index', ['users' => $users]);
     }
 
     /**
@@ -56,7 +57,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = \App\User::findOrFail($id);
+        return view('admin.edit', ['user' => $user]);
     }
 
     /**
@@ -68,7 +70,17 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = \App\User::findOrFail($id);
+        $user->no_ujian = $request->no_ujian;
+        $user->nama = $request->nama;
+        $user->alamat = $request->alamat;
+        $user->tgl_lahir = $request->tgl_lahir;
+        $user->status = $request->status;
+        $user->no_hp = $request->no_hp;
+        $user->kelompok = $request->kelompok;
+        $user->save();
+
+        return redirect()->route('admin.index')->with('status','Data berhasil diupdate');
     }
 
     /**
@@ -79,6 +91,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = \App\User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('admin.index')->with('status','Data berhasil dihapus');
     }
 }
