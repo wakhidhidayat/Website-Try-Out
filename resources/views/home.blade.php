@@ -33,7 +33,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Tanggal Lahir') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="date" class="form-control" name="tgl_lahir" value=" {{ Auth::user()->tgl_lahir }}" disabled>
+                                <input id="name" type="text" class="form-control" name="tgl_lahir" value=" {{ Auth::user()->tgl_lahir }}" disabled>
                             </div>
                         </div>
 

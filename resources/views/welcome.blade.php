@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{ config('app.name')}}
                 </div>
 
                 <div class="links">
                     <a href="{{ route('register')}}">Daftar Peserta</a>
-                    <a href="#">Cetak Kartu Ujian</a>
+                    <a href="{{ route('login')}}">Cetak Kartu Ujian</a>
                 </div>
             </div>
         </div>
