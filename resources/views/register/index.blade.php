@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('daftar')}}">Daftar Peserta</a>
+                    <a href="#">Daftar Peserta</a>
                     <a href="#">Cetak Kartu Ujian</a>
                 </div>
             </div>

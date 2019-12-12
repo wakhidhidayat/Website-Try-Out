@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('no_ujian')->unique();
             $table->string('nama');
             $table->string('alamat');
+            $table->string('asal_sekolah');
             $table->date('tgl_lahir');
             $table->enum('status', ['MENUNGGU PEMBAYARAN','VERIFIED']);
             $table->string('no_hp')->unique();
