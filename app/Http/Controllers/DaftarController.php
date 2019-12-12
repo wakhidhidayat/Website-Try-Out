@@ -13,7 +13,7 @@ class DaftarController extends Controller
      */
     public function index()
     {
-        //
+        return view('register.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class DaftarController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +34,16 @@ class DaftarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newUser = new \App\User;
+        $newUser->no_ujian = mt_rand(10000000, 99999999);
+        $newUser->nama = $request->nama;
+        $newUser->alamat = $request->alamat;
+        $newUser->tgl_lahir = $request->tgl_lahir;
+        $newUser->no_hp = $request->no_hp;
+        $newUser->kelompok = $request->kelompok;
+        $newUser->asal_sekolah = $request->asal_sekolah;
+
+        $newUser->save();
     }
 
     /**
