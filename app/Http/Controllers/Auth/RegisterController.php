@@ -49,12 +49,15 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nama' => ['required', 'string', 'max:191'],
-            'alamat' => ['required', 'string', 'max:191'],
-            'tgl_lahir' => ['required', 'date'],
-            'no_hp' => ['required', 'string', 'max:20'],
-            'kelompok' => ['required'],
-            'asal_sekolah' => ['required','max:191']
+            'nama' => 'required', 'string', 'max:191',
+            'alamat' => 'required', 'string', 'max:191',
+            'tgl_lahir' => 'required', 'date',
+            'no_hp' => 'required', 'string', 'max:20',
+            'kelompok' => 'required',
+            'asal_sekolah' => 'required','max:191',
+            'no_ujian' => '',
+            'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
+            'password' => 'required', 'string', 'min:8', 'confirmed'
         ]);
     }
 
@@ -66,14 +69,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $noujian = mt_rand(1111111111, mt_getrandmax());
         return User::create([
             'nama' => $data['nama'],
-            'no_ujian' => $data[mt_rand(1111111111, mt_getrandmax())],
+            'no_ujian' => $data[$noujian],
             'alamat' => $data['alamat'],
             'tgl_lahir' => $data['tgl_lahir'],
             'no_hp' => $data['no_hp'],
             'kelompok' => $data['kelompok'],
-            'asal_sekolah' => $data['asal_sekolah']
+            'asal_sekolah' => $data['asal_sekolah'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
