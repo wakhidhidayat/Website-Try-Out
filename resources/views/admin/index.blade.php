@@ -30,8 +30,8 @@
                     <td>{{$user->kelompok}}</td>
                     <td>{{$user->asal_sekolah}}</td>
                     <td>{{$user->status}}</td>
-                    <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a></td>
-                    <td><form
+                    <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a>
+                    <form
                         onsubmit="return confirm('Hapus Peserta Ini?')"
                         class="d-inline"
                         action="{{route('admin.destroy', ['id' => $user->id ])}}"
@@ -45,7 +45,28 @@
                         type="submit"
                         value="Delete"
                         class="btn btn-danger btn-sm">
-                        </form</td>
+                        </form>
+
+                        @if ($user->status != "VERIFIED")
+                        <td>
+                            <form
+                            onsubmit="return confirm('Verifikasi Peserta Ini?')"
+                            class="d-inline"
+                            action="{{route('admin.verif', ['id' => $user->id ])}}"
+                            method="POST">
+                            @csrf
+                            <input
+                            type="hidden"
+                            name="_method"
+                            value="PUT">
+                            <input
+                            type="submit"
+                            value="Verifikasi"
+                            class="btn btn-info btn-sm">
+                            </form>
+                        </td>
+                        @endif
+                    </td>
                 </tr>
             @empty
                 <b>DATA KOSONG</b>

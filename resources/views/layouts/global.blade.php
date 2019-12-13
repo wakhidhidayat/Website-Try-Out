@@ -48,9 +48,9 @@ id="navbar-dropdown" data-toggle="dropdown">
 </button>
 @endif
 <div class="dropdown-menu dropdown-menu-right" id="navbardropdown">
-<a href="#" class="dropdown-item">Profile</a>
+{{-- <a href="#" class="dropdown-item">Profile</a>
 <a href="#" class="dropdown-item">Setting</a>
-<div class="dropdown-divider"></div>
+<div class="dropdown-divider"></div> --}}
 <li>
 <form action="{{route("logout")}}" method="POST">
 @csrf

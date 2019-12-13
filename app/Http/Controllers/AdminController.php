@@ -104,4 +104,13 @@ class AdminController extends Controller
 
         return redirect()->route('admin.index')->with('status','Data berhasil dihapus');
     }
+
+    public function verif($id)
+    {
+        $user = \App\User::findOrFail($id);
+        $user->status = "VERIFIED";
+        $user->save();
+
+        return redirect()->route('admin.index')->with('status','Peserta berhasil terverifikasi');
+    }
 }
