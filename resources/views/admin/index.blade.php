@@ -20,7 +20,8 @@
         </thead>
         <tbody>
             @forelse ($users as $user)
-                <tr>
+                @if ($user->role == "USER")
+                   <tr>
                     <td>{{$user->nama}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->no_ujian}}</td>
@@ -68,6 +69,9 @@
                         @endif
                     </td>
                 </tr>
+
+                @endif
+
             @empty
                 <b>DATA KOSONG</b>
             @endforelse
