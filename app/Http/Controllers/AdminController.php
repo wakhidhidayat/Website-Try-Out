@@ -71,13 +71,12 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $user = \App\User::findOrFail($id);
-        $user->no_ujian = $request->no_ujian;
         $user->nama = $request->nama;
         $user->alamat = $request->alamat;
-        $user->tgl_lahir = $request->tgl_lahir;
         $user->status = $request->status;
         $user->no_hp = $request->no_hp;
         $user->kelompok = $request->kelompok;
+        $user->asal_sekolah = $request->asal_sekolah;
         $user->save();
 
         return redirect()->route('admin.index')->with('status','Data berhasil diupdate');
