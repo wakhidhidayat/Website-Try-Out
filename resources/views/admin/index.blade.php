@@ -31,6 +31,21 @@
                     <td>{{$user->asal_sekolah}}</td>
                     <td>{{$user->status}}</td>
                     <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a></td>
+                    <td><form
+                        onsubmit="return confirm('Hapus Peserta Ini?')"
+                        class="d-inline"
+                        action="{{route('admin.destroy', ['id' => $user->id ])}}"
+                        method="POST">
+                        @csrf
+                        <input
+                        type="hidden"
+                        name="_method"
+                        value="DELETE">
+                        <input
+                        type="submit"
+                        value="Delete"
+                        class="btn btn-danger btn-sm">
+                        </form</td>
                 </tr>
             @empty
                 <b>DATA KOSONG</b>
