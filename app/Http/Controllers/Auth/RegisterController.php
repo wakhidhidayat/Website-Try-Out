@@ -69,10 +69,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $noujian = mt_rand(1111111111, mt_getrandmax());
+        $maxpeserta = User::max('no_ujian');
+        if($maxpeserta == 0) {
+            $maxpeserta = 1;
+        }
+        $noujian = sprintf("%09s",abs($maxpeserta +1)); 
         return User::create([
             'nama' => $data['nama'],
-            'no_ujian' => $data[$noujian],
+            'no_ujian' => $noujian,
             'alamat' => $data['alamat'],
             'tgl_lahir' => $data['tgl_lahir'],
             'no_hp' => $data['no_hp'],
