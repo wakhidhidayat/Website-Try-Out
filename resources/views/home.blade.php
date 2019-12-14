@@ -84,7 +84,7 @@
                                     <div class="alert alert-success" role="alert">
                                         {{ Auth::user()->status }}
                                     </div>
-                                    <button type="button" class="btn btn-primary">Cetak Kartu</button>
+                                    <a href="{{ route('print') }}" class="btn btn-primary">Cetak Kartu</a>
                                 @else
                                     <div class="alert alert-danger" role="alert">
                                         {{ Auth::user()->status }}
