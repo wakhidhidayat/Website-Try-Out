@@ -84,7 +84,6 @@
                                     <div class="alert alert-success" role="alert">
                                         {{ Auth::user()->status }}
                                     </div>
-                                    <a href="{{ route('print') }}" class="btn btn-primary">Cetak Kartu</a>
                                 @else
                                     <div class="alert alert-danger" role="alert">
                                         {{ Auth::user()->status }}
@@ -93,6 +92,10 @@
                             </div>
                         </div>
                     </form>
+                    <div class="text-center justify-content-center">
+                            {!! QrCode::size(250)->generate('Auth::user()->no_ujian'); !!}
+                        <a href="{{ route('print') }}" class="col btn btn-lg btn-primary">Cetak Kartu</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1121,8 +1121,7 @@ color:white;mso-color-alt:windowtext'>&nbsp;</span></b></p>
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-  style='font-size:16.0pt;mso-no-proof:yes'><img width=141 height=141
-  id="_x0000_i1025" src="card_files/image004.jpg"></span></b></p>
+  style='font-size:16.0pt;mso-no-proof:yes'>{!! QrCode::size(250)->generate('Auth::user()->no_ujian'); !!}</span></b></p>
   </td>
  </tr>
 </table>
