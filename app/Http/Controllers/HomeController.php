@@ -32,6 +32,6 @@ class HomeController extends Controller
     }
     public function print() {
         $print = PDF::loadView('print');
-        return $print->download('Kartu Peserta'.date('Y-m-d_H-i-s').'.pdf');
+        return $print->download('Kartu Tanda Peserta-'.\Auth::user()->no_ujian.'.pdf');
     }
 }
