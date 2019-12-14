@@ -16,13 +16,25 @@ class AdminController extends Controller
     public function __construct() {
         $this->middleware(function($request, $next){
             if(Gate::allows('manage-users')) return $next($request);
-            abort(403, 'Anda tidak memiliki cukup hak akses');
+            abort(403, 'Anda tidak memiliki hak akses');
         });
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $users = \App\User::paginate(10);
+        $status = $request->status;
+        $keyword = $request->q;
+        if($keyword) {
+            if($status) {
+                $users = \App\User::where('nama', 'LIKE', "%$keyword%")->where('status', $status)->paginate(10);
+            } else {
+                $users = \App\User::where('nama', 'LIKE', "%$keyword%")->paginate(10);
+            }
+        } elseif($status) {
+            $users = \App\User::where('status', $status)->paginate(10);
+        }
+
         return view('admin.index', ['users' => $users]);
     }
 
@@ -103,5 +115,14 @@ class AdminController extends Controller
         $user->delete();
 
         return redirect()->route('admin.index')->with('status','Data berhasil dihapus');
+    }
+
+    public function verif($id)
+    {
+        $user = \App\User::findOrFail($id);
+        $user->status = "VERIFIED";
+        $user->save();
+
+        return redirect()->route('admin.index')->with('status','Peserta berhasil terverifikasi');
     }
 }
