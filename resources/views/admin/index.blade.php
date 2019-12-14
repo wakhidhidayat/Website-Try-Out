@@ -48,6 +48,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
+                <td><b>No</b></td>
                 <td><b>Nama</b></td>
                 <td><b>Email</b></td>
                 <td><b>No Peserta</b></td>
@@ -57,13 +58,19 @@
                 <td><b>Kelompok</b></td>
                 <td><b>Asal Sekolah</b></td>
                 <td><b>Status</b></td>
-                <td><b>Aksi</b></td>
+                <td><b>Edit</b></td>
+                <td><b>Delete</b></td>
+                <td><b>Verifikasi</b></td>
             </tr>
         </thead>
         <tbody>
-            @forelse ($users as $user)
+            <?php
+                $no = 1;
+            ?>
+            @foreach ($users as $user)
                 @if ($user->role == "USER")
                    <tr>
+                    <td>{{$no++}}</td>
                     <td>{{$user->nama}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->no_ujian}}</td>
@@ -83,8 +90,9 @@
                             </span>
                         @endif
                     </td>
-                    <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a>
-                    <form
+                    <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a></td>
+                    <td>
+                        <form
                         onsubmit="return confirm('Hapus Peserta Ini?')"
                         class="d-inline"
                         action="{{route('admin.destroy', ['id' => $user->id ])}}"
@@ -99,6 +107,7 @@
                         value="Delete"
                         class="btn btn-danger btn-sm">
                         </form>
+                    </td>
 
                         @if ($user->status != "VERIFIED")
                         <td>
@@ -118,15 +127,13 @@
                             class="btn btn-success btn-sm">
                             </form>
                         </td>
+
                         @endif
                     </td>
                 </tr>
 
                 @endif
-
-            @empty
-                <b>DATA KOSONG</b>
-            @endforelse
+            @endforeach
         </tbody>
         <tfoot>
             <tr>

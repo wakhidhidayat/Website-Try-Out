@@ -56,8 +56,9 @@ class RegisterController extends Controller
             'kelompok' => 'required',
             'asal_sekolah' => 'required','max:191',
             'no_ujian' => '',
-            'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
-            'password' => 'required', 'string', 'min:8', 'confirmed'
+            'email' => 'required', 'string', 'email', 'max:191', 'unique:users',
+            'password' => 'required', 'string', 'min:8', 'confirmed',
+            'password_confirmation' => 'required', 'same:password'
         ]);
     }
 
@@ -69,11 +70,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $validation = \Validator::make($data,[
+            "nama" => "required|max:191",
+            "alamat" => "required|max:191",
+            "asal_sekolah" => "required|max:191",
+            "tgl_lahir" => "required|date",
+            "no_hp" => "required|max:20",
+            "kelompok" => "required",
+            "email" => "required|max:191|unique:users",
+            "password" => "required|min:8|max:191",
+            "password_confirmation" => "required|same:password"
+        ])->validate();
+
         $maxpeserta = User::max('no_ujian');
         if($maxpeserta == 0) {
             $maxpeserta = 1;
         }
-        $noujian = sprintf("%09s",abs($maxpeserta +1)); 
+        $noujian = sprintf("%09s",abs($maxpeserta +1));
         return User::create([
             'nama' => $data['nama'],
             'no_ujian' => $noujian,
