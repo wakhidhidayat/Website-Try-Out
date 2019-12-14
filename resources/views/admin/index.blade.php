@@ -3,6 +3,48 @@
     Admin Dashboard
 @endsection
 @section('content')
+
+    @if(session('status'))
+        <div class="alert alert-success">
+            {{session('status')}}
+        </div>
+    @endif
+
+    <form action="{{route('admin.index')}}">
+        <div class="row">
+            <div class="col-md-6">
+                <input
+                value="{{Request::get('q')}}"
+                name="q"
+                class="form-control col-md-10"
+                type="text"
+                placeholder="Cari berdasarkan nama"/>
+            </div>
+            <div class="col-md-6">
+                <input {{Request::get('status') == 'VERIFIED' ? 'checked' : ''}}
+                value="VERIFIED"
+                name="status"
+                type="radio"
+                class="form-control"
+                id="verified">
+                <label for="verified">Verified</label>
+
+                <input {{Request::get('status') != 'VERIFIED' ? 'checked' : ''}}
+                value="MENUNGGU PEMBAYARAN"
+                name="status"
+                type="radio"
+                class="form-control"
+                id="menunggu-pembayaran">
+                <label for="menunggu-pembayaran">Menunggu Pembayaran</label>
+
+                <input
+                type="submit"
+                value="Filter Peserta"
+                class="btn btn-primary">
+            </div>
+        </div>
+    </form> <br>
+
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -30,7 +72,17 @@
                     <td>{{$user->tgl_lahir}}</td>
                     <td>{{$user->kelompok}}</td>
                     <td>{{$user->asal_sekolah}}</td>
-                    <td>{{$user->status}}</td>
+                    <td>
+                        @if ($user->status == "VERIFIED")
+                            <span class="badge badge-success">
+                                {{$user->status}}
+                            </span>
+                        @else
+                            <span class="badge badge-danger">
+                                {{$user->status}}
+                            </span>
+                        @endif
+                    </td>
                     <td><a class="btn btn-info text-white btn-sm" href="{{route('admin.edit',['id'=>$user->id])}}">Edit</a>
                     <form
                         onsubmit="return confirm('Hapus Peserta Ini?')"
@@ -63,7 +115,7 @@
                             <input
                             type="submit"
                             value="Verifikasi"
-                            class="btn btn-info btn-sm">
+                            class="btn btn-success btn-sm">
                             </form>
                         </td>
                         @endif
@@ -76,5 +128,12 @@
                 <b>DATA KOSONG</b>
             @endforelse
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan=10>
+                    {{$users->appends(Request::all())->links()}}
+                </td>
+            </tr>
+        </tfoot>
     </table>
 @endsection
