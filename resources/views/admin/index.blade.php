@@ -52,6 +52,8 @@
                 <td><b>Nama</b></td>
                 <td><b>Email</b></td>
                 <td><b>No Peserta</b></td>
+                <td><b>Foto</b></td>
+                <td><b>Kelas</b></td>
                 <td><b>No HP</b></td>
                 <td><b>Alamat</b></td>
                 <td><b>Tanggal lahir</b></td>
@@ -74,6 +76,8 @@
                     <td>{{$user->nama}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->no_ujian}}</td>
+                    <td><img src="{{asset('storage/'.$user->foto_url)}}" alt="pas foto" width="70px"></td>
+                    <td>{{$user->kelas}}</td>
                     <td>{{$user->no_hp}}</td>
                     <td>{{$user->alamat}}</td>
                     <td>{{$user->tgl_lahir}}</td>

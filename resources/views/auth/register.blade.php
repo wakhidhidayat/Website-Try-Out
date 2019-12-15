@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -38,7 +38,33 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="no_hp" class="col-md-4 col-form-label text-md-right">{{ __('No Hp') }}</label>
+                            <label for="foto" class="col-md-4 col-form-label text-md-right">{{ __('Pas Foto') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="foto" type="file" class="{{ $errors->first('foto') ? ' is-invalid' : '' }}" name="foto" value="{{ old('foto') }}" required autofocus>
+
+                                <div class="invalid-feedback">
+                                    {{$errors->first('foto')}}
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kelas" class="col-md-4 col-form-label text-md-right">{{ __('Kelas (Tahun lulus bagi alumni)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="kelas" type="text" class="form-control{{ $errors->first('kelas') ? ' is-invalid' : '' }}" name="kelas" value="{{ old('kelas') }}" maxlength="10" required autofocus>
+
+                                <div class="invalid-feedback">
+                                    {{$errors->first('kelas')}}
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="no_hp" class="col-md-4 col-form-label text-md-right">{{ __('No Whatsapp') }}</label>
 
                             <div class="col-md-6">
                                 <input id="no_hp" type="text" class="form-control{{ $errors->first('no_hp') ? ' is-invalid' : '' }}" name="no_hp" value="{{ old('no_hp') }}" required autofocus maxlength="20">
