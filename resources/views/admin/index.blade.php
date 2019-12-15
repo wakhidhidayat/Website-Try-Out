@@ -127,6 +127,10 @@
                             class="btn btn-success btn-sm">
                             </form>
                         </td>
+                        @else
+                        <td>
+                            <a href="{{route('admin.print', ['id' => $user->id])}}" class="btn btn-success">Cetak Kartu</a>
+                        </td>
 
                         @endif
                     </td>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use PDF;
 
 class AdminController extends Controller
 {
@@ -121,8 +122,16 @@ class AdminController extends Controller
     {
         $user = \App\User::findOrFail($id);
         $user->status = "VERIFIED";
+        \QrCode::size(250)->format('png')->generate($user->no_ujian, public_path($user->no_ujian.'.png'));
         $user->save();
 
         return redirect()->route('admin.index')->with('status','Peserta berhasil terverifikasi');
+    }
+
+    public function print($id)
+    {
+        $user = \App\User::findOrFail($id);
+        $print = PDF::loadView('admin-print', ['user' => $user]);
+        return $print->download('Kartu Tanda Peserta-'.$user->no_ujian.'.pdf');
     }
 }

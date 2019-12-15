@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use PDF;
 class HomeController extends Controller
 {
     /**
@@ -31,8 +31,8 @@ class HomeController extends Controller
 
     }
 
-    public function cetak()
-    {
-
+    public function print() {
+        $print = PDF::loadView('print');
+        return $print->download('Kartu Tanda Peserta-'.\Auth::user()->no_ujian.'.pdf');
     }
 }
