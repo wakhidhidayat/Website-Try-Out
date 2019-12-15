@@ -11,3 +11,8 @@ Route::get('/admin/edit/{id}', 'AdminController@edit')->name('admin.edit');
 Route::put('/admin/edit/{id}', 'AdminController@update')->name('admin.update');
 Route::delete('/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
 Route::put('/admin/verif/{id}', 'AdminController@verif')->name('admin.verif');
+// Route::post('/home/{id}', 'HomeController@cetak')->name('home.cetak');
+Route::get('qr-code-g', function() {
+    \QrCode::size(2000)->format('png')->generate('WAHID', public_path('no_peserta.png'));
+    return view('qrcode');
+});

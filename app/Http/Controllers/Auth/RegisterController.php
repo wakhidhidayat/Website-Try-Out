@@ -70,7 +70,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $validation = \Validator::make($data,[
+        $validation = Validator::make($data,[
             "nama" => "required|max:191",
             "alamat" => "required|max:191",
             "asal_sekolah" => "required|max:191",
