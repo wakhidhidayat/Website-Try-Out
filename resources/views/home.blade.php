@@ -6,13 +6,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard Peserta</div>
-
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <!-- <div>
+                        <img src="{{asset('storage/'.Auth::user()->foto_url)}}"  class="rounded img-fluid img-thumbnail" alt="photo profile" >
+                    </div> -->
                     <form>
                         @csrf
                         <div class="form-group row">
@@ -72,7 +69,6 @@
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value=" {{ Auth::user()->email }}" disabled>
                             </div>
@@ -84,6 +80,10 @@
                                     <div class="alert alert-success" role="alert">
                                         {{ Auth::user()->status }}
                                     </div>
+                                    <div class="text-center justify-content-center">
+                                        {!! QrCode::size(250)->generate('Auth::user()->no_ujian'); !!}
+                                        <a href="{{ route('print') }}" class="col btn btn-lg btn-primary">Cetak Kartu</a>
+                                    </div>
                                 @else
                                     <div class="alert alert-danger" role="alert">
                                         {{ Auth::user()->status }}
@@ -92,10 +92,12 @@
                             </div>
                         </div>
                     </form>
-                    <div class="text-center justify-content-center">
-                            {!! QrCode::size(250)->generate('Auth::user()->no_ujian'); !!}
-                        <a href="{{ route('print') }}" class="col btn btn-lg btn-primary">Cetak Kartu</a>
-                    </div>
+                </div>
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

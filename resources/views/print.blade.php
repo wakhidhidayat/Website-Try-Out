@@ -1007,71 +1007,120 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
 
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
 text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</span></b></p>
-
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-  <td width=200 valign=top style='width:150.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=170 rowspan=4 valign=top style='width:127.35pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 0cm 0cm 0cm'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:16.0pt;line-height:150%'>NOMOR UJIAN</span></b></p>
+  150%'><b style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;
+  line-height:150%;mso-no-proof:yes'><img width=141 height=178 id="_x0000_i1026"
+  src="{{asset('storage/'.\Auth::user()->foto_url)}}"></span></b><b><span style='font-size:12.0pt;
+  line-height:150%'><o:p></o:p></span></b></p>
   </td>
-  <td width=36 valign=top style='width:26.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=131 valign=top style='width:98.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>NOMOR UJIAN</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
+  </td>
+  <td width=30 valign=top style='width:22.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:150%'><b><span style='font-size:16.0pt;
-  line-height:150%'>:</span></b></p>
+  text-align:center;line-height:150%'><b><span style='font-size:12.0pt;
+  line-height:150%'>:</span></b><span style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=365 valign=top style='width:273.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=270 valign=top style='width:202.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:16.0pt;line-height:150%'>{{ Auth::user()->no_ujian }}</span></b></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>{{ Auth::user()->no_ujian }}</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1'>
-  <td width=200 valign=top style='width:150.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:16.0pt;line-height:150%'>NAMA PESERTA</span></b></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>NAMA PESERTA</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=36 valign=top style='width:26.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=30 valign=top style='width:22.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:150%'><b><span style='font-size:16.0pt;
-  line-height:150%'>:</span></b></p>
+  text-align:center;line-height:150%'><b><span style='font-size:12.0pt;
+  line-height:150%'>:</span></b><span style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=365 valign=top style='width:273.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=270 valign=top style='width:202.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><span class=SpellE><b><span style='font-size:16.0pt;line-height:150%'>{{ Auth::user()->nama }}</span></b></span></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>{{ Auth::user()->nama }}</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
-  <td width=200 valign=top style='width:150.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:16.0pt;line-height:150%'>ASAL SEKOLAH</span></b></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>ASAL SEKOLAH</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=36 valign=top style='width:26.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=30 valign=top style='width:22.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:150%'><b><span style='font-size:16.0pt;
-  line-height:150%'>:</span></b></p>
+  text-align:center;line-height:150%'><b><span style='font-size:12.0pt;
+  line-height:150%'>:</span></b><span style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=365 valign=top style='width:273.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=270 valign=top style='width:202.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><span class=SpellE><b><span style='font-size:16.0pt;line-height:150%'>{{ Auth::user()->asal_sekolah }}</span></b></span></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>{{ Auth::user()->asal_sekolah }}</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-  <td width=200 valign=top style='width:150.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:16.0pt;line-height:150%'>KELOMPOK</span></b></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>KELOMPOK</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=36 valign=top style='width:26.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=30 valign=top style='width:22.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:150%'><b><span style='font-size:16.0pt;
-  line-height:150%'>:</span></b></p>
+  text-align:center;line-height:150%'><b><span style='font-size:12.0pt;
+  line-height:150%'>:</span></b><span style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
-  <td width=365 valign=top style='width:273.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <td width=270 valign=top style='width:202.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><span class=SpellE><b><span style='font-size:16.0pt;line-height:150%'>{{ Auth::user()->kelompok }}</span></b></span></p>
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>{{ Auth::user()->kelompok }}</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
-
 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
 text-align:center'><b><span style='font-size:16.0pt;line-height:106%;
 color:white;mso-color-alt:windowtext'>&nbsp;</span></b></p>
