@@ -92,7 +92,7 @@
                                         Pembayaran dilakukan dengan transfer ke nomor rekening : 
                                         <b> <br> BCA : 8850813354
                                         <br> BNI : 0887207347
-                                        <br> Atas Nama Apresia Dwiyunita </b>
+                                        <br> </b>Atas Nama : <b>Apresia Dwiyunita</b>
                                         <br> Silakan Upload Bukti Pembayaran untuk <b>Verifikasi
                                     </div>
                                 @endif
