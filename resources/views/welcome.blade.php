@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name')}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #ffffff!important;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -39,32 +39,60 @@
                 right: 10px;
                 top: 18px;
             }
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
 
             .content {
                 text-align: center;
             }
 
             .title {
-                font-size: 84px;
+                font-size: 44px;
             }
 
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
-                font-weight: 600;
+                font-weight: 900;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+            .desk {
+               margin-left:10%;
+               margin-right:10%;
+               margin-bottom:10%;
+            }
+            .d {
+                margin-bottom:10px;
+                font-size: 20px;
+                font-weight: 900;
+            }
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 10px;
             }
         </style>
+            <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <div class="top-left" href="#">
+                <img src="{{ asset('/images/image001.jpg') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
+                <img src="{{ asset('/images/image002.png') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
+                <img src="{{ asset('/images/image003.png') }}" width="100" height="50" class="d-inline-block align-top" alt="images 1">
+            </div>    
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -78,15 +106,19 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     {{ config('app.name')}}
                 </div>
-
+                <div class="d">
+                    19 Januari 2020
+                    SMA N 1 Bekasi
+                </div>
+                <div class="desk">
+                    {{ config('app.desc')}}
+                </div>
                 <div class="links">
-                    <a href="{{ route('register')}}">Daftar Peserta</a>
-                    <a href="{{ route('login')}}">Cetak Kartu Ujian</a>
+                    <a href="{{ route('register')}}" ><button class="btn btn-lg btn-primary" >Daftar Sekarang</button> </a>
                 </div>
             </div>
         </div>

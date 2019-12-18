@@ -13,8 +13,14 @@ return [
     |
     */
 
-    'name' => "Tryout",
-
+    'name' => "Try-Out 5TH GADJAH MADA EVENT IN BEKASI",
+    'desc' => "GMEB (Gadjah Mada Event in Bekasi) merupakan serangkaian kegiatan yang diselenggarakan oleh Forum Komunikasi
+    Mahasiswa Bekasi Universitas Gadjah Mada (Forkomasi UGM) setiap tahunnya dan kini memasuki tahun kelima . Melalui acara ini,
+    Forkomasi UGM bermaksud untuk menjebatani peserta didik SMA/MA Sederajat dengan Universitas Negeri Yogyakarta dalam mempersiapkan ujian masuk 
+    perguruan tinggi nanti. Adapun rangkaian acara dalam kegiatan ini meliputi, Roadshow dimana para anggota Forkomasi UGM akan melakukan sosialisasi
+    mengenai Universitas Gadjah Mada ke SMA/MA sederajat baik yang ada di Kabupaten Bekasi maupun Kota Bekasi. Selain itu juga ada serangkaian acara Try-Out GMEB
+    yang merupakan puncak dari rangkaian acara 5TH Gadjah Mada Event in Bekasi. 
+    ",
     /*
     |--------------------------------------------------------------------------
     | Application Environment
