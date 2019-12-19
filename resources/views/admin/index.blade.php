@@ -52,8 +52,8 @@
                 <td><b>Nama</b></td>
                 <td><b>Email</b></td>
                 <td><b>No Peserta</b></td>
-                <td><b>Kelas</b></td>
-                <td><b>No HP</b></td>
+                <td><b>Jenjang/Tahun Lulus</b></td>
+                <td><b>No WhatsApp</b></td>
                 <td><b>Alamat</b></td>
                 <td><b>Tanggal lahir</b></td>
                 <td><b>Kelompok</b></td>

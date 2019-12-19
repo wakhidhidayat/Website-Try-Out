@@ -1012,7 +1012,7 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm;mso-border-insideh:.5pt solid windowtext;
  mso-border-insidev:.5pt solid windowtext'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-  <td width=170 rowspan=4 valign=top style='width:127.35pt;border:solid windowtext 1.0pt;
+  <td width=170 rowspan=5 valign=top style='width:127.35pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 0cm 0cm 0cm'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
   150%'><b style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;
@@ -1024,7 +1024,7 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b><span style='font-size:12.0pt;line-height:150%'>NOMOR UJIAN</span></b><span
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>NOMOR PESERTA</span></b><span
   style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
   <td width=30 valign=top style='width:22.65pt;border:solid windowtext 1.0pt;
@@ -1068,6 +1068,7 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
   style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
+
  <tr style='mso-yfti-irow:2'>
   <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1094,7 +1095,35 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
   style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+
+ <tr style='mso-yfti-irow:3'>
+  <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>JENJANG</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
+  </td>
+  <td width=30 valign=top style='width:22.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:center;line-height:150%'><b><span style='font-size:12.0pt;
+  line-height:150%'>:</span></b><span style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
+  </td>
+  <td width=270 valign=top style='width:202.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  150%'><b><span style='font-size:12.0pt;line-height:150%'>{{ Auth::user()->kelas }}</span></b><span
+  style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
   <td width=131 valign=top style='width:98.0pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
@@ -1164,7 +1193,7 @@ color:white;mso-color-alt:windowtext'>&nbsp;</span></b></p>
   class=SpellE>papan</span> <span class=SpellE><span class=GramE>ujian</span></span><span
   class=GramE> ,</span> <span class=SpellE>pensil</span> 2B, <span
   class=SpellE>penghapus</span>, <span class=SpellE>peraut</span> <span
-  class=SpellE>pensi</span> (<span class=SpellE>jika</span> <span class=SpellE>diperlukan</span>)</span></b></p>
+  class=SpellE>pensil</span> (<span class=SpellE>jika</span> <span class=SpellE>diperlukan</span>)</span></b></p>
   </td>
   <td width=148 valign=top style='width:110.85pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
