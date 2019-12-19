@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;	
 use PDF;
+
 class HomeController extends Controller
 {
     /**
@@ -19,31 +19,28 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\View\View
      */
     public function index()
     {
-        if(\Auth::user()->role == "ADMIN") {
-            return redirect()->route('admin.index');
-        } else {
-            return view('home');
+        if(\Auth::user()->role == "ADMIN") {	
+            return redirect()->route('admin.index');	
+        } else {	
+            return view('profile.edit');	
         }
-
     }
-
-    public function print() {
-        $print = PDF::loadView('print');
-        return $print->download('Kartu Tanda Peserta-'.\Auth::user()->no_ujian.'.pdf');
+    public function print() {	
+        $print = PDF::loadView('print');	
+        return $print->download('Kartu Tanda Peserta-'.\Auth::user()->no_ujian.'.pdf');	
     }
-
-    public function upload(Request $request)
-    {
-        $user = \Auth::user();
-        if($request->file('bukti_bayar')) {
-            $file = $request->file('bukti_bayar')->store('bukti_bayar','public');
-            $user->bukti_bayar = $file;
-        }
-        $user->save();
-        return redirect()->route('home');
+    public function upload(Request $request)	
+    {	
+        $user = \Auth::user();	
+        if($request->file('bukti_bayar')) {	
+            $file = $request->file('bukti_bayar')->store('bukti_bayar','public');	
+            $user->bukti_bayar = $file;	
+        }	
+        $user->save();	
+        return redirect()->route('profile.edit');	
     }
 }
