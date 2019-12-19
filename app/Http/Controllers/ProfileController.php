@@ -15,7 +15,11 @@ class ProfileController extends Controller
      */
     public function edit()
     {
-        return view('profile.edit');
+        if(\Auth::user()->role == "ADMIN") {	
+            return redirect()->route('admin.index');	
+        } else {	
+            return view('profile.edit');	
+        }
     }
 
     /**

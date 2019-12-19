@@ -26,7 +26,7 @@ class HomeController extends Controller
         if(\Auth::user()->role == "ADMIN") {	
             return redirect()->route('admin.index');	
         } else {	
-            return view('profile');	
+            return view('profile.edit');	
         }
     }
     public function print() {	
@@ -41,6 +41,6 @@ class HomeController extends Controller
             $user->bukti_bayar = $file;	
         }	
         $user->save();	
-        return redirect()->route('home');	
+        return redirect()->route('profile.edit');	
     }
 }
