@@ -41,7 +41,7 @@
                             <label for="foto" class="col-md-4 col-form-label text-md-right">{{ __('Pas Foto') }}</label>
 
                             <div class="col-md-6">
-                                <input id="foto" type="file" class="{{ $errors->first('foto') ? ' is-invalid' : '' }}" name="foto" value="{{ old('foto') }}" required autofocus>
+                                <input id="foto" accept="image/jpg, image/gif, image/png, image/jpeg" type="file" class="{{ $errors->first('foto') ? ' is-invalid' : '' }}" name="foto" value="{{ old('foto') }}" required autofocus>
 
                                 <div class="invalid-feedback">
                                     {{$errors->first('foto')}}

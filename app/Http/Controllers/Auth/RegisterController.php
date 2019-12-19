@@ -79,7 +79,7 @@ class RegisterController extends Controller
             "kelompok" => "required",
             "email" => "required|max:191|unique:users",
             "password" => "required|min:8|max:191",
-            "password_confirmation" => "required|same:password"
+            "password_confirmation" => "required|same:password",
         ])->validate();
 
         $maxpeserta = User::max('no_ujian');
