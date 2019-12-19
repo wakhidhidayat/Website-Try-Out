@@ -88,14 +88,10 @@ class RegisterController extends Controller
         }
         $noujian = sprintf("%09s",abs($maxpeserta +1));
 
-        $request = request();
-        // $file = Image::make($request->file('foto'))->resize(240,320)->insert('pas_foto','public');
-        $file = $request->file('foto')->store('pas_foto', 'public');
         return User::create([
             'nama' => $data['nama'],
             'no_ujian' => $noujian,
             'alamat' => $data['alamat'],
-            'foto_url' => $file,
             'kelas' => $data['kelas'],
             'tgl_lahir' => $data['tgl_lahir'],
             'no_hp' => $data['no_hp'],
