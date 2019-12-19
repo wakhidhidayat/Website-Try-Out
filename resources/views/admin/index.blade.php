@@ -63,6 +63,7 @@
                 <td><b>Edit</b></td>
                 <td><b>Delete</b></td>
                 <td><b>Verifikasi</b></td>
+                <td><b>Bukti Bayar</b></td>
             </tr>
         </thead>
         <tbody>
@@ -138,6 +139,13 @@
 
                         @endif
                     </td>
+                    @if ($user->bukti_bayar != null)
+                        <td>
+                            <a href="{{asset('storage/'.$user->bukti_bayar)}}" class="btn btn-primary">Lihat Bukti Bayar</a>
+                        </td>
+                    @else
+                        <td>Belum Ada</td>
+                    @endif
                 </tr>
 
                 @endif
