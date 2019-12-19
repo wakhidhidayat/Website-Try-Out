@@ -79,7 +79,7 @@ class RegisterController extends Controller
             "kelompok" => "required",
             "email" => "required|max:191|unique:users",
             "password" => "required|min:8|max:191",
-            "password_confirmation" => "required|same:password"
+            "password_confirmation" => "required|same:password",
         ])->validate();
 
         $maxpeserta = User::max('no_ujian');
@@ -89,7 +89,6 @@ class RegisterController extends Controller
         $noujian = sprintf("%09s",abs($maxpeserta +1));
 
         $request = request();
-        //$file = Image::make($request->file('foto'))->resize(240,320)->insert('pas_foto','public');
         $file = $request->file('foto')->store('pas_foto', 'public');
         return User::create([
             'nama' => $data['nama'],
