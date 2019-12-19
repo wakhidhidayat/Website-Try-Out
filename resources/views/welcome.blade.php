@@ -92,11 +92,11 @@
                 <img src="{{ asset('/images/image001.jpg') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
                 <img src="{{ asset('/images/image002.png') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
                 <img src="{{ asset('/images/image003.png') }}" width="100" height="50" class="d-inline-block align-top" alt="images 1">
-            </div>    
+            </div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
