@@ -1,7 +1,10 @@
 <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
     <div class="container px-4">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/white.png" />
+            <!-- <img src="{{ asset('argon') }}/img/brand/white.png" /> -->
+            <img src="{{ asset('/images/image001.jpg') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
+                <img src="{{ asset('/images/image002.png') }}" width="50" height="50" class="d-inline-block align-top" alt="images 1">
+                <img src="{{ asset('/images/image003.png') }}" width="100" height="50" class="d-inline-block align-top" alt="images 1">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

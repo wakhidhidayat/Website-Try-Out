@@ -9,23 +9,12 @@
         <div class="row">
             <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                 <div class="card card-profile shadow">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 order-lg-2">
-                            <div class="card-profile-image">
-                                <a href="#">
-                                    <!-- <img src="{{ asset('argon') }}/img/theme/team-4-800x800.jpg" class="rounded-circle"> -->
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="text-center card-body pt-0 pt-md-4">
                         <div class="text-center">
-                            
                             @if (Auth::user()->status == "VERIFIED")
                             <p>{{ __('Peserta Terverifikasi') }}</p>  
                             <hr class="my-4" />
-                            {!! QrCode::size(250)->generate(Auth::user()->no_ujian); !!}
-
+                                {!! QrCode::size(250)->generate(Auth::user()->no_ujian); !!}
                                 <div class="alert alert-success" role="alert">
                                 {{ Auth::user()->status }}
                                 </div>
@@ -37,18 +26,11 @@
                                 </a>
                             @else
                             <p>{{ __('Menunggu Pembayaran') }}</p>  
+                           
                             <hr class="my-4" />
-                                <div>
-                                <br>Pembayaran dilakukan dengan transfer ke nomor rekening :
-                                        <b> 
-                                        <br> BNI : 0887207347
-                                        <br> </b>Atas Nama : <b>Apresia Dwiyunita</b>
-                                        <br> Silakan Upload Bukti Pembayaran untuk <b>Verifikasi
-                               
                                 <div class="alert alert-danger" role="alert">
                                 {{ Auth::user()->status }}
-                                 
-                                </div>               
+                                </div>                  
                             @endif
                             @if (Auth::user()->status != "VERIFIED")
                             <form action="" method="POST" enctype="multipart/form-data">
@@ -60,15 +42,23 @@
                                 <button type="submit" class="btn btn-primary">
                                         Upload
                                     </button>
-                                </form>
-                            <!-- <a href="#">{{ __('Show more') }}</a> -->
+                                </form>  
+                                <span> <br> Pembayaran dilakukan dengan transfer 
+                                <br>ke nomor rekening :
+                                        <b> 
+                                        <br> BNI : 0887207347 
+                                        <br> </b>Atas Nama : <b>Apresia Dwiyunita</b> 
+                                        <br><b> Rp. 40.000</b>
+                                        <br> Maksimal Pembayaran <b>17 Januari 2020 </b>
+                                        <br> Silakan Upload Bukti Pembayaran untuk <b>Verifikasi </b></span>                             
                             @endif
                         </div>
+                        
                     </div>
                 </div>
             </div>
             <div class="col-xl-8 order-xl-1">
-                <div class="card bg-secondary shadow">
+                <div class="card shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <h3 class="col-12 mb-0">{{ __('Profile') }}</h3>

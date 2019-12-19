@@ -8,6 +8,7 @@
                     <div class="col-lg-5 col-md-6">
                         <h1 class="text-white">{{ config('app.name')}}</h1>
                     </div>
+                    <h3 class="text-white">{{ config('app.desc')}}</h3>
                 </div>
             </div>
         </div>
