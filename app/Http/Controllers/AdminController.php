@@ -99,6 +99,7 @@ class AdminController extends Controller
         $user->no_hp = $request->no_hp;
         $user->kelompok = $request->kelompok;
         $user->asal_sekolah = $request->asal_sekolah;
+        $user->kelas = $request->kelas;
         $user->save();
 
         return redirect()->route('admin.index')->with('status','Data berhasil diupdate');

@@ -40,18 +40,17 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                            <div class="form-group{{ $errors->first('password') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" value="secret" required>
-                                </div>
-                                @if ($errors->has('password'))
+                                    <input class="form-control{{ $errors->first('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" required>
+
                                     <span class="invalid-feedback" style="display: block;" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                </div>
                             </div>
                             <div class="custom-control custom-control-alternative custom-checkbox">
                                 <input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
@@ -66,13 +65,13 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-6">
+                    {{-- <div class="col-6">
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}" class="text-light">
                                 <small>{{ __('Forgot password?') }}</small>
                             </a>
                         @endif
-                    </div>
+                    </div> --}}
                     <div class="col-6 text-right">
                         <a href="{{ route('register') }}" class="text-light">
                             <small>{{ __('Create new account') }}</small>

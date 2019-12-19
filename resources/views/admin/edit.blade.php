@@ -14,6 +14,8 @@
         <input type="text" name="alamat" value="{{$user->alamat}}" class="form-control" placeholder="Alamat">
         <label for="no_hp">No Hp</label>
         <input type="text" name="no_hp" value="{{$user->no_hp}}" class="form-control" placeholder="Nomor Hp" maxlength="20">
+        <label for="kelas">Jenjang/Tahun Lulus</label>
+        <input type="text" name="kelas" value="{{$user->kelas}}" class="form-control" placeholder="Jenjang/Tahun Lulus" maxlength="20">
         <label for="kelompok">Kelompok</label>
         <select name="kelompok" class="form-control">
             <option value="SAINTEK" {{$user->kelompok == 'SAINTEK' ? 'selected' : ''}}>SAINTEK</option>
