@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Try Out @yield("title")</title>
+<title>Try Out GMB | @yield("title")</title>
 <link rel="stylesheet" href="{{asset('polished/polished.min.css')}}">
 <link rel="stylesheet" href="{{asset('polished/iconic/css/open-iconic-bootstrap.min.css')}}">
 <style>
@@ -34,7 +34,7 @@ document.documentElement.className.replace('no-js', 'js') +
 </head>
 <body>
 <nav class="navbar navbar-expand p-0">
-<a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="index.html"> Try Out </a>
+<a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="#"> Try Out </a>
 <button class="btn btn-link d-block d-md-none" datatoggle="collapse" data-target="#sidebar-nav" role="button" >
 <span class="oi oi-menu"></span>
 </button>

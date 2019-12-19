@@ -55,25 +55,26 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                            <div class="form-group{{ $errors->first('password') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}" type="password" name="password" required>
-                                </div>
-                                @if ($errors->has('password'))
+                                    <input class="form-control{{ $errors->first('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}" type="password" name="password" id="password" required>
                                     <span class="invalid-feedback" style="display: block;" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required>
+                                    <input class="form-control{{ $errors->first('password_confirmation') ? ' is-invalid' : ''}}" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required>
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
                                 </div>
                             </div>
                             <!-- tgl lahir -->
@@ -129,7 +130,7 @@
                                     </div>
                                     <select class="form-control{{ $errors->has('kelompok') ? ' is-invalid' : '' }}" placeholder="{{ __('Kelompok Ujian') }}" name="kelompok" value="{{ old('kelompok') }}" required autofocus>
                                     <option value="SAINTEK">SAINTEK</option>
-                                    <option value="SOSHUM">SOSHUM</option>                                    
+                                    <option value="SOSHUM">SOSHUM</option>
                                     </select>
                                 </div>
                                 @if ($errors->has('kelompok'))
@@ -174,13 +175,13 @@
                                     <div class="custom-control custom-control-alternative custom-checkbox">
                                         <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                                         <label class="custom-control-label" for="customCheckRegister">
-                                            <span class="text-muted">{{ __('I agree with the') }} <a href="#!">{{ __('Privacy Policy') }}</a></span>
+                                            <span class="text-muted">{{ __('I agree with the') }} {{ __('Privacy Policy') }}</span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-4">{{ __('Create account') }}</button>
+                                <button type="submit" class="btn btn-primary mt-4">{{ __('Daftar') }}</button>
                             </div>
                         </form>
                     </div>
