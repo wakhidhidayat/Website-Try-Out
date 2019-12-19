@@ -6,13 +6,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard Peserta</div>
-
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <!-- <div>
+                        <img src="{{asset('storage/'.Auth::user()->foto_url)}}"  class="rounded img-fluid img-thumbnail" alt="photo profile" >
+                    </div> -->
                     <form>
                         @csrf
                         <div class="form-group row">
@@ -72,7 +69,6 @@
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value=" {{ Auth::user()->email }}" disabled>
                             </div>
@@ -84,18 +80,49 @@
                                     <div class="alert alert-success" role="alert">
                                         {{ Auth::user()->status }}
                                     </div>
+                                    <div class="text-center justify-content-center">
+                                        {!! QrCode::size(250)->generate(\Auth::user()->no_ujian); !!}
+                                        <a href="{{ route('print') }}" class="col btn btn-lg btn-primary">Cetak Kartu</a>
+                                    </div>
                                 @else
                                     <div class="alert alert-danger" role="alert">
                                         {{ Auth::user()->status }}
+                                    </div>
+                                    <div>
+                                        Pembayaran dilakukan dengan transfer ke nomor rekening :
+                                        <b> <br> BCA : 8850813354
+                                        <br> BNI : 0887207347
+                                        <br> </b>Atas Nama : <b>Apresia Dwiyunita</b>
+                                        <br> Silakan Upload Bukti Pembayaran untuk <b>Verifikasi
                                     </div>
                                 @endif
                             </div>
                         </div>
                     </form>
-                    <div class="text-center justify-content-center">
-                            {!! QrCode::size(250)->generate('Auth::user()->no_ujian'); !!}
-                        <a href="{{ route('print') }}" class="col btn btn-lg btn-primary">Cetak Kartu</a>
-                    </div>
+                    @if (Auth::user()->status != "VERIFIED")
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group row">
+                                <label for="bukti_bayar" class="col-md-4 col-form-label text-md-right"></label>
+                                <div class="col-md-6">
+                                    <input type="file" name="bukti_bayar" id="bukti_bayar">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Upload
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    @endif
+                </div>
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

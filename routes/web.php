@@ -13,4 +13,5 @@ Route::delete('/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
 Route::put('/admin/verif/{id}', 'AdminController@verif')->name('admin.verif');
 Route::get('/home/print','HomeController@print')->name('print');
 Route::get('/admin/print/{id}','AdminController@print')->name('admin.print');
+Route::post('/home', 'HomeController@upload')->name('home.upload');
 
