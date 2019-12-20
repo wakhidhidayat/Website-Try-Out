@@ -52,8 +52,9 @@
                 <td><b>Nama</b></td>
                 <td><b>Email</b></td>
                 <td><b>No Peserta</b></td>
-                <td><b>Jenjang/Tahun Lulus</b></td>
-                <td><b>No WhatsApp</b></td>
+                <td><b>Foto</b></td>
+                <td><b>Kelas</b></td>
+                <td><b>No HP</b></td>
                 <td><b>Alamat</b></td>
                 <td><b>Tanggal lahir</b></td>
                 <td><b>Kelompok</b></td>
@@ -61,9 +62,7 @@
                 <td><b>Status</b></td>
                 <td><b>Edit</b></td>
                 <td><b>Delete</b></td>
-                <td><b>Bukti Bayar</b></td>
                 <td><b>Verifikasi</b></td>
-
             </tr>
         </thead>
         <tbody>
@@ -77,6 +76,7 @@
                     <td>{{$user->nama}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->no_ujian}}</td>
+                    <td><img src="{{asset('storage/'.$user->foto_url)}}" alt="pas foto" width="70px"></td>
                     <td>{{$user->kelas}}</td>
                     <td>{{$user->no_hp}}</td>
                     <td>{{$user->alamat}}</td>
@@ -112,13 +112,6 @@
                         class="btn btn-danger btn-sm">
                         </form>
                     </td>
-                    @if ($user->bukti_bayar != null)
-                    <td>
-                        <a href="{{asset('storage/'.$user->bukti_bayar)}}" class="btn btn-primary">Lihat Bukti Bayar</a>
-                    </td>
-                    @else
-                        <td>Belum Ada</td>
-                    @endif
 
                         @if ($user->status != "VERIFIED")
                         <td>
