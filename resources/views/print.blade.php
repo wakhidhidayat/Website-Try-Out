@@ -1015,9 +1015,8 @@ text-align:center'><b><span style='font-size:16.0pt;line-height:106%'>&nbsp;</sp
   <td width=170 rowspan=5 valign=top style='width:127.35pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 0cm 0cm 0cm'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  150%'><b style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;
-  line-height:150%;mso-no-proof:yes'><img width=141 height=178 id="_x0000_i1026"
-  src=""></span></b><b><span style='font-size:12.0pt;
+  150%'><b style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt; text-align:center; vertical-align:middle;
+  line-height:150%;mso-no-proof:yes'; > <br>Tanggal Ujian 19 Januari 2020</span></b><b><span style='font-size:12.0pt;
   line-height:150%'><o:p></o:p></span></b></p>
   </td>
   <td width=131 valign=top style='width:98.0pt;border:solid windowtext 1.0pt;
@@ -1182,6 +1181,28 @@ color:white;mso-color-alt:windowtext'>&nbsp;</span></b></p>
   12.0pt'>Membawa</span></b></span><b><span style='font-size:12.0pt'> <span
   class=SpellE>kartu</span> <span class=SpellE>tanda</span> <span class=SpellE>peserta</span>
   <span class=SpellE>ini</span></span></b></p>
+
+  <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+  0cm;margin-left:39.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
+  normal;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='font-size:
+  12.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;mso-fareast-font-family:
+  Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span class=SpellE><b><span style='font-size:
+  12.0pt'>Open Gate</span></b></span><b><span style='font-size:12.0pt'><span
+  class=SpellE> 06:30</span></b></p>
+
+  <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+  0cm;margin-left:39.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
+  normal;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='font-size:
+  12.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;mso-fareast-font-family:
+  Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span class=SpellE><b><span style='font-size:
+  12.0pt'>Close Gate</span></b></span><b><span style='font-size:12.0pt'><span
+  class=SpellE> 08:15</span></b></p>
+
+
   <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
   0cm;margin-left:39.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
   normal;mso-list:l0 level1 lfo2'><![if !supportLists]><span style='font-size:
