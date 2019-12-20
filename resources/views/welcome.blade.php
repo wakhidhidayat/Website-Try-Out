@@ -15,11 +15,10 @@
                                 - Faculty Fair <br>
                                 - Talkshow <br>
                                 - Doorprize <br>
-                                - Stickers <br> <br>
+                                - Stickers <br> <br> </h3>
 
-                        YUK DAFTAR SEKARANG    </h3> <br>
-
-                        <a class="btn btn-success" href="{{route('register')}}">Daftar Sekarang</a>
+                        <a class="btn btn-success" href="{{route('register')}}">Daftar Sekarang</a> <br> <br>
+                        <a class="btn btn-success" href="{{route('login')}}">Login</a>
                 </div>
             </div>
         </div>
