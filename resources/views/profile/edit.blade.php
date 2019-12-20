@@ -57,7 +57,7 @@
                                         <br> BNI : 0887207347
                                         <br> </b>Atas Nama : <b>Apresia Dwiyunita</b>
                                         <br> Maksimal Pembayaran <b>18 Januari 2020 </b>
-                                        <br> Upload Bukti Pembayaran untuk <b>Verifikasi </b></span>
+                                        <br> Upload Bukti Pembayaran untuk <b>Verifikasi </b></span> <br>
                                         <br> For further information, contact(choose one):
                                         <br>
                                             <b>Monika</b> <br>- monika.btari (ID LINE) <br>- 081297178065 (WA) <br>
