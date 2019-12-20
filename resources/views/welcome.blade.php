@@ -8,7 +8,18 @@
                     <div class="col-lg-5 col-md-6">
                         <h1 class="text-white">{{ config('app.name')}}</h1>
                     </div>
-                    <h3 class="text-white">{{ config('app.desc')}}</h3>
+                    <h3 class="text-white">{{ config('app.desc')}} <br> <br>
+                        Dengan mendaftar tryout, kamu akan mendapatkan <br>
+
+                                - Snack <br>
+                                - Faculty Fair <br>
+                                - Talkshow <br>
+                                - Doorprize <br>
+                                - Stickers <br> <br>
+
+                        YUK DAFTAR SEKARANG    </h3> <br>
+
+                        <a class="btn btn-success" href="{{route('register')}}">Daftar Sekarang</a>
                 </div>
             </div>
         </div>

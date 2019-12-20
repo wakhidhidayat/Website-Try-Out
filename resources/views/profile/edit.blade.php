@@ -72,7 +72,7 @@
                 <div class="card shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="col-12 mb-0">{{ __('Profile') }}</h3>
+                            <h3 class="col-12 mb-0">{{ __('Profil') }}</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -80,7 +80,7 @@
                             @csrf
                             @method('put')
 
-                            <h6 class="heading-small text-muted mb-4">{{ __('User information') }}</h6>
+                            <h6 class="heading-small text-muted mb-4">{{ __('Informasi Peserta') }}</h6>
 
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
