@@ -22,6 +22,27 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+              <div class="center">
+              </div>
+
+              <div class="col-md-4 wow fadeInLeft">
+                <h3>Faculty Fair</h3>
+                <img src="{{asset('images/_MG_0465.JPG')}} " alt="" width="290px" height="220px">
+              </div>
+
+              <div class="col-md-4 wow fadeInUp">
+                <h3>Tryout</h3>
+                  <img src="{{asset('images/DSC_0301.JPG')}}" alt="" width="290px" height="220px">
+              </div>
+
+              <div class="col-md-4 wow fadeInRight">
+                <h3>Talkshow</h3>
+                <img src="{{asset('images/IMG_0480.JPG')}}" alt="" width="290px" height="220px">
+              </div>
+            </div>
+          </div>
         <div class="separator separator-bottom separator-skew zindex-100">
             <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
