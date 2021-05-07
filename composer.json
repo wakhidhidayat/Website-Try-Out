@@ -14,7 +14,7 @@
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.5",
         "laravel-frontend-presets/argon": "^1.0",
-        "laravel/framework": "5.7.*",
+        "laravel/framework": "6.18.*",
         "laravel/tinker": "^1.0",
         "simplesoftwareio/simple-qrcode": "^2.0"
     },
